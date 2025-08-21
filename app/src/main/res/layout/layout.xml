@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/benimbutonum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#277FE4"
+        android:onClick="yaz"
+        android:padding="50dp"
+        android:text="Tıkla"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+      >
+
+
+    </Button>
+
+</LinearLayout>
