@@ -1,5 +1,6 @@
 package com.example.kahvecim
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -7,10 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.kahvecim.databinding.ActivityMainBinding
+import com.example.kahvecim.databinding.ImageLayoutBinding
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
+    private lateinit var imageLayoutBinding: ImageLayoutBinding
 
 
 
@@ -18,21 +21,25 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        imageLayoutBinding = ImageLayoutBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
 
+binding.butonum.setOnClickListener {
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+    binding.imageButton.setImageResource(R.drawable.gs)
 
-        }
+}
 
-
-        binding.benimbutonum.setOnClickListener {
-            binding.benimtextim.text = "Hello World!"
-        }
+//           var sayi = 0
+//
+//      binding.benimbutonum.setOnClickListener {
+//
+//        if (sayi < 10)
+//
+//         sayi++
+//            binding.benimtextim.text = sayi.toString()
+//        }
 
 
 
