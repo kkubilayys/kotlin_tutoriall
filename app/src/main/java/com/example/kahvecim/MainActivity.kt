@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.kahvecim.databinding.ActivityMainBinding
@@ -25,9 +26,12 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-binding.butonum.setOnClickListener {
 
-    binding.imageButton.setImageResource(R.drawable.gs)
+
+
+//binding.butonum.setOnClickListener {
+//
+//    binding.imageButton.setImageResource(R.drawable.gs)
 
 }
 
@@ -46,4 +50,3 @@ binding.butonum.setOnClickListener {
     }
 
 
-}

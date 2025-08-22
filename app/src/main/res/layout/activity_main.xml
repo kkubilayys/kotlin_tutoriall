@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#BED719"
     android:padding="30dp"
     android:paddingHorizontal="80dp"
     tools:context=".MainActivity"
@@ -44,27 +44,62 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        tools:ignore="MissingConstraints" />-->
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/imageButton"-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="300dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
 
 
-    </ImageButton>
+    <!--    </ImageButton>-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/butonum"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:text="foto ekle "-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/imageButton"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/imageButton"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.565" />-->
 
     <Button
-        android:id="@+id/butonum"
+        android:id="@+id/button"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="265dp"
+
+        android:backgroundTint="#991450"
+        android:text="FKA"
+        app:cornerRadius="20dp"
+        app:icon="@android:drawable/btn_star_big_on"
+        app:iconPadding="0dp"
+        app:iconTint="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:strokeColor="#160707"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="foto ekle "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565" />
+        android:layout_marginTop="147dp"
+        android:layout_marginBottom="71dp"
+
+        android:backgroundTint="#9E0F0F"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
