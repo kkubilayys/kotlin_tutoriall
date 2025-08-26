@@ -74,8 +74,8 @@
         android:layout_height="0dp"
         android:layout_marginBottom="265dp"
 
-        android:backgroundTint="#991450"
         android:text="FKA"
+
         app:cornerRadius="20dp"
         app:icon="@android:drawable/btn_star_big_on"
         app:iconPadding="0dp"
@@ -87,20 +87,32 @@
         app:strokeColor="#160707"
         app:strokeWidth="3dp" />
 
-    
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="147dp"
         android:layout_marginBottom="71dp"
-
-        android:backgroundTint="#9E0F0F"
-        android:text="Button"
+        android:text="Hoşgeldin"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="140dp"
+        android:layout_height="61dp"
+        android:gravity="center"
+        android:text="TextView"
+
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:layout_marginTop="20dp">
+
+    </TextView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

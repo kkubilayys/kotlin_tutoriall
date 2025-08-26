@@ -26,8 +26,14 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
+        binding.button.setOnClickListener {
+            binding.textView.setText(resources.getText(R.string.back))
+        }
+        binding.button.setBackgroundColor(resources.getColor(R.color.btnrengi))
+        binding.button2.setBackgroundColor(resources.getColor(R.color.btnrengi)
 
 
+        )
 
 //binding.butonum.setOnClickListener {
 //
