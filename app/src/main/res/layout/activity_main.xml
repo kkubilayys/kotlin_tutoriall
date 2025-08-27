@@ -10,74 +10,85 @@
     tools:context=".MainActivity"
     tools:ignore="NamespaceTypo">
 
-    <EditText
-        android:id="@+id/etİsim"
+   <LinearLayout
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <EditText
+
+           android:id="@+id/etSayi1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:inputType="number"
+           android:hint="sayı1">
+
+       </EditText>
+
+       <EditText
+           android:id="@+id/etSayi2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:inputType="number"
+           android:hint="sayı2"
+           >
+       </EditText>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="isim:"
-        >
+        android:layout_marginTop="20dp">
 
-    </EditText>
+        <Button
+            android:id="@+id/btntopla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Topla"
+            android:layout_weight="1">
 
-    <EditText
-        android:id="@+id/etSoyisim"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="soyisim:">
+        </Button>
 
-    </EditText>
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email:"
-        android:inputType="textEmailAddress">
+        <Button
+            android:id="@+id/btncıkar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Çıkar"
+            android:layout_weight="1">
 
-    </EditText>
+        </Button>
 
-    <EditText
-        android:id="@+id/etTel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telefon Numarası: "
-        android:inputType="number">
+        <Button
+            android:id="@+id/btncarp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Çarp"
+            android:layout_weight="1">
 
-    </EditText>
+        </Button>
 
-    <EditText
-        android:id="@+id/etSifre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Sifre:"
-        android:inputType="numberPassword">
+        <Button
+            android:id="@+id/btnbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bölme"
+            android:layout_weight="1">
 
-    </EditText>
-    <Button
-        android:id="@+id/btnYazdır"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Yazdır"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:background="@color/btnrengi">
+        </Button>
 
-    </Button>
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/veriler"
+        android:id="@+id/sonuc"
         android:layout_width="match_parent"
-        android:layout_height="224dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:textColor="#F60707"
-        android:background="@color/black"
-        android:padding="20dp"
-        >
-
-
+        android:text="Sonuç:"
+        android:textSize="30dp"
+        android:textAlignment="center">
     </TextView>
-
-
-
-
 
 </LinearLayout>

@@ -26,19 +26,51 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        binding.btnYazdR.setOnClickListener {
-            val isim = binding.etSim.text.toString()
-            val soyisim = binding.etSoyisim.text.toString()
-            val email = binding.etEmail.text.toString()
-            val phone = binding.etTel.text.toString()
-            val sifre = binding.etSifre.text.toString()
 
-            binding.veriler.text = isim + "\n" +
-                    soyisim + "\n" +
-                    email + "\n" +
-                    phone + "\n" +
-                    sifre
 
+        fun topla(){
+
+            val sayi1 = binding.etSayi1.text.toString().toInt()
+            val sayi2 = binding.etSayi2.text.toString().toInt()
+            val sonuc = sayi1 + sayi2
+            binding.sonuc.text = sonuc.toString()
+        }
+
+        fun cıkar(){
+
+            val sayi1 = binding.etSayi1.text.toString().toInt()
+            val sayi2 = binding.etSayi2.text.toString().toInt()
+            val sonuc = sayi1 - sayi2
+            binding.sonuc.text = sonuc.toString()
+        }
+        fun capma(){
+
+            val sayi1 = binding.etSayi1.text.toString().toInt()
+            val sayi2 = binding.etSayi2.text.toString().toInt()
+            val sonuc = sayi1 * sayi2
+            binding.sonuc.text = sonuc.toString()
+        }
+        fun bolme(){
+
+            val sayi1 = binding.etSayi1.text.toString().toInt()
+            val sayi2 = binding.etSayi2.text.toString().toInt()
+            if ( sayi2 != 0 ){
+            val sonuc = sayi1 / sayi2
+                binding.sonuc.text = sonuc.toString()
+            }
+
+        }
+        binding.btntopla.setOnClickListener {
+            topla()
+        }
+        binding.btncKar.setOnClickListener {
+            cıkar()
+        }
+        binding.btncarp.setOnClickListener {
+            capma()
+        }
+        binding.btnbol.setOnClickListener {
+            bolme()
         }
     }
 }
