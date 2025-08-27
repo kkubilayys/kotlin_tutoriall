@@ -26,33 +26,21 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        binding.button.setOnClickListener {
-            binding.textView.setText(resources.getText(R.string.back))
+        binding.btnYazdR.setOnClickListener {
+            val isim = binding.etSim.text.toString()
+            val soyisim = binding.etSoyisim.text.toString()
+            val email = binding.etEmail.text.toString()
+            val phone = binding.etTel.text.toString()
+            val sifre = binding.etSifre.text.toString()
+
+            binding.veriler.text = isim + "\n" +
+                    soyisim + "\n" +
+                    email + "\n" +
+                    phone + "\n" +
+                    sifre
+
         }
-        binding.button.setBackgroundColor(resources.getColor(R.color.btnrengi))
-        binding.button2.setBackgroundColor(resources.getColor(R.color.btnrengi)
-
-
-        )
-
-//binding.butonum.setOnClickListener {
-//
-//    binding.imageButton.setImageResource(R.drawable.gs)
-
-}
-
-//           var sayi = 0
-//
-//      binding.benimbutonum.setOnClickListener {
-//
-//        if (sayi < 10)
-//
-//         sayi++
-//            binding.benimtextim.text = sayi.toString()
-//        }
-
-
-
     }
+}
 
 
