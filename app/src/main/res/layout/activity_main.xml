@@ -11,29 +11,17 @@
     tools:ignore="NamespaceTypo">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:startIconDrawable="@drawable/baseline_person_24"
-        app:endIconMode="password_toggle"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
-        app:helperText="Zorunlu"
-        app:helperTextTextColor="#EB0505"
-        app:errorIconDrawable="@drawable/outline_adjust_24">
+        android:hint="Marka seçin">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/acTextView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="sifre"
-            android:inputType="textPassword">
-
-        </com.google.android.material.textfield.TextInputEditText>
-
-
-
+            android:layout_height="wrap_content"
+            android:textSize="30sp"/>
     </com.google.android.material.textfield.TextInputLayout>
+
 
 
 </LinearLayout>

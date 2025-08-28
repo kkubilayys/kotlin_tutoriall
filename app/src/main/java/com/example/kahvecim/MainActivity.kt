@@ -1,17 +1,11 @@
 package com.example.kahvecim
 
-import android.graphics.Color
 import android.os.Bundle
-import android.view.View
+import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.widget.doOnTextChanged
 import com.example.kahvecim.databinding.ActivityMainBinding
 import com.example.kahvecim.databinding.ImageLayoutBinding
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -27,18 +21,14 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        binding.textInputEditText.doOnTextChanged { text, start, before, count ->
+        val markalar = resources.getStringArray(R.array.Markalar)
 
-            if( text?.length!! > 10){
-                binding.textInputLayout.error = "karakter sınırını aştınız"
-            }
-            else{
-                binding.textInputLayout.error = null
-            }
+        val adapter = ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,markalar)
+        binding.acTextView.setAdapter(adapter)
         }
 
 
     }
-}
+
 
 
