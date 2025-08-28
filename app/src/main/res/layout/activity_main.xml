@@ -10,85 +10,30 @@
     tools:context=".MainActivity"
     tools:ignore="NamespaceTypo">
 
-   <LinearLayout
-       android:orientation="horizontal"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
-       <EditText
-
-           android:id="@+id/etSayi1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_weight="1"
-           android:inputType="number"
-           android:hint="sayı1">
-
-       </EditText>
-
-       <EditText
-           android:id="@+id/etSayi2"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_weight="1"
-           android:inputType="number"
-           android:hint="sayı2"
-           >
-       </EditText>
-
-   </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        app:startIconDrawable="@drawable/baseline_person_24"
+        app:endIconMode="password_toggle"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:helperText="Zorunlu"
+        app:helperTextTextColor="#EB0505"
+        app:errorIconDrawable="@drawable/outline_adjust_24">
 
-        <Button
-            android:id="@+id/btntopla"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Topla"
-            android:layout_weight="1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="sifre"
+            android:inputType="textPassword">
 
-        </Button>
+        </com.google.android.material.textfield.TextInputEditText>
 
-        <Button
-            android:id="@+id/btncıkar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Çıkar"
-            android:layout_weight="1">
 
-        </Button>
 
-        <Button
-            android:id="@+id/btncarp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Çarp"
-            android:layout_weight="1">
+    </com.google.android.material.textfield.TextInputLayout>
 
-        </Button>
-
-        <Button
-            android:id="@+id/btnbol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bölme"
-            android:layout_weight="1">
-
-        </Button>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/sonuc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Sonuç:"
-        android:textSize="30dp"
-        android:textAlignment="center">
-    </TextView>
 
 </LinearLayout>
