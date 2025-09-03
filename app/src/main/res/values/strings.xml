@@ -2,13 +2,5 @@
     <string name="app_name">kahvecim</string>
     <string name="back">TEXT DEGİSTİ</string>
 
-     <string-array name="Markalar">
-         <item>Mercedes</item>
-         <item>bmw</item>
-         <item>audi</item>
-         <item>volkswagen</item>
-         <item>fiat</item>
-         <item>ferrari</item>
-     </string-array>
 
 </resources>

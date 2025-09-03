@@ -1,5 +1,7 @@
 package com.example.kahvecim
 
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
@@ -7,9 +9,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.kahvecim.databinding.ActivityMainBinding
 import com.example.kahvecim.databinding.ImageLayoutBinding
 
+
+
+
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
-    private lateinit var imageLayoutBinding: ImageLayoutBinding
+
+
 
 
 
@@ -17,18 +24,19 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        imageLayoutBinding = ImageLayoutBinding.inflate(layoutInflater)
-        enableEdgeToEdge()
         setContentView(binding.root)
 
-        val markalar = resources.getStringArray(R.array.Markalar)
+        binding.btnMain.setOnClickListener {
 
-        val adapter = ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,markalar)
-        binding.acTextView.setAdapter(adapter)
+            Intent(this, SecondActivity::class.java).also {
+                startActivity(it)
+            }
+
         }
-
-
     }
+}
+
+
 
 
 
